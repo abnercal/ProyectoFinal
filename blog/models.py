@@ -3,7 +3,8 @@ from django.utils import timezone
 # Create your models here.
 class Marca(models.Model):#postea algo en el blog
     nombre = models.CharField(max_length=50)
-
+    def __str__(self):
+        return self.nombre
 
 class Bicicleta(models.Model):
     autor = models.ForeignKey('auth.User')
@@ -14,3 +15,5 @@ class Bicicleta(models.Model):
     imagen=models.ImageField(blank = 'True')
     fecha_publicacion = models.DateTimeField(
                         blank=True, null=True)
+    def __str__(self):
+        return self.fabricante
