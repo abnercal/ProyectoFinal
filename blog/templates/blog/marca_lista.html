@@ -15,8 +15,8 @@
       <td>{{ marca.id }}</td>
 			<td>{{ marca.nombre }}</td>
 			<td>
-				<a class="btn btn-primary" href="#">Editar</a>
-				<a class="btn btn-danger" href="#">Eliminar</a>
+				<a class="btn btn-primary" href="{% url 'blog.views.Marca_mod' pk=marca.pk %}">Editar</a>
+				<a class="btn btn-danger" href="{% url 'blog.views.Marca_delete' pk=marca.pk %}">Eliminar</a>
 			</td>
 		</tr>
 		{% endfor %}
