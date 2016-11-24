@@ -18,7 +18,7 @@ class Bicicleta(models.Model):
     fecha_publicacion = models.DateTimeField(
                         blank=True, null=True)
     def __str__(self):
-        return self.fabricante
+        return self.descripcion
 
     def photo_delete(sender, instance, **kwargs):
     #""Borra los ficheros de las fotos que se eliminan""
